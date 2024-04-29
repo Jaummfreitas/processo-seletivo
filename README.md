@@ -8,8 +8,8 @@ login do site "Automation Practice"
 - Automatizar os cenários de teste criados
 - Framework utilizado: Cypress
 - IDE: VSCode
-##Funcionalidade: Página de Login
-
+  
+## Funcionalidade: Página de Login
 
 ### Cenário: Submetendo um registro de conta com entradas já existentes
 - Dado que o usuário esteja na página "authentication"
