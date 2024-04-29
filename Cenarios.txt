@@ -1,0 +1,23 @@
+Feature: Login Page
+
+  Scenario: Submitting an account registration with already existing inputs
+    Given I am on the login page
+    When I enter "test@gmail.com" in the email field
+    Then I click the submit button
+    Then I should see "An account using this email address has already been registered. Please enter a valid password or request a new one." message above the email field
+    And I should see a green success icon in the email field
+
+  Scenario: Submitting an account login with invalid inputs
+    Given I am on the login page
+    When I enter "test@gmail.com" in the email field
+    Then I enter "Testing123" in the password field
+    Then I click the submit button
+    Then I should see "Authentication failed."
+
+  Scenario: Submitting an email to change user password
+    Given I am on the login page
+    When I click "Forgot your password?" link
+    Then I should be directed to the password reset page
+    Then I enter "test@gmail.com" in the email field
+    Then I click the submit button
+    Then I should see "A confirmation email has been sent to your address: test@gmail.com
